@@ -1,0 +1,25 @@
+* {
+  /* Reset de base */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: darkgray;
+  margin: 0; /* Supprime les marges par défaut */
+  padding: 0; /* Supprime les paddings par défaut */
+  background-image: url("./pictures/vintage-grunge.jpg"); /* Remplacez 'votre-image.jpg' par le chemin de votre image */
+  background-size: 100% 100%; /* Étire l'image pour qu'elle couvre à la fois la largeur et la hauteur de la page */
+  background-repeat: no-repeat; /* Empêche la répétition de l'image */
+  background-position: center; /* Centre l'image sur la page */
+  min-height: 100vh;
+
+  header {
+    img {
+      height: 150px;
+      width: 150px;
+      border-radius: 50%;
+    }
+  }
+}
