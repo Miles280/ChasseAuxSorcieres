@@ -1,25 +1,102 @@
+/* Reset */
 * {
-  /* Reset de base */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  color: darkgray;
-  margin: 0; /* Supprime les marges par défaut */
-  padding: 0; /* Supprime les paddings par défaut */
-  background-image: url("./pictures/vintage-grunge.jpg"); /* Remplacez 'votre-image.jpg' par le chemin de votre image */
-  background-size: 100% 100%; /* Étire l'image pour qu'elle couvre à la fois la largeur et la hauteur de la page */
-  background-repeat: no-repeat; /* Empêche la répétition de l'image */
-  background-position: center; /* Centre l'image sur la page */
-  min-height: 100vh;
+/* Variables */
+:root {
+  --blackTransparent: rgba(0, 0, 0, 0.3);
+}
 
-  header {
+body {
+  font-family: "Cardo", sans-serif;
+  background-color: black;
+  .cinzel {
+    font-family: "Cinzel", "Cardo", sans-serif;
+  }
+  .cinzelDeco {
+    font-family: "Cinzel Decorative", "Cardo", sans-serif;
+  }
+}
+
+/* Header principal */
+header {
+  color: #877232;
+  opacity: 1;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  background-image: url(./pictures/textureViolet.jpg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+
+  #top {
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
     img {
-      height: 150px;
-      width: 150px;
-      border-radius: 50%;
+      height: 100px; /* Limite la hauteur de l'image */
     }
+  }
+
+  #bottom {
+    height: 100%;
+    padding-bottom: 10em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    #textIntro {
+      text-align: center;
+      .cinzel {
+        font-size: 30px;
+      }
+      .cinzelDeco {
+        font-size: 50px;
+      }
+      button {
+        margin-top: 25px;
+        background-color: #080736;
+        color: #877232;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 10px;
+        font-size: 20px;
+      }
+    }
+
+    #imgIntro img {
+      margin-left: 3em;
+      height: 25em;
+      border-radius: 30%;
+    }
+  }
+}
+
+/* Header caché */
+#hiddenHeader {
+  color: #877232;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s linear, opacity 0.7s linear;
+  background-image: url(./pictures/textureViolet.jpg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: sticky;
+  top: 0;
+  height: 0;
+  width: 100%;
+  text-align: center;
+
+  img {
+    height: 100px;
   }
 }
